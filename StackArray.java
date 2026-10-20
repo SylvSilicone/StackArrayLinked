@@ -1,7 +1,7 @@
 import java.util.ArrayList;
-public class StackImplimentation<T> implements StackInterface<T> {
+public class STackArray<T> implements StackInterface<T> {
     private ArrayList<T> elements;
-    public StackImplimentation() 
+    public StackArray() 
     {
         elements = new ArrayList<>();
     }
