@@ -1,7 +1,7 @@
 import java.util.ArrayList;
-public class STackArray<T> implements StackInterface<T> {
+public class ArrayStack<T> implements StackInterface<T> {
     private ArrayList<T> elements;
-    public StackArray() 
+    public ArrayStack() 
     {
         elements = new ArrayList<>();
     }
@@ -40,7 +40,15 @@ public class STackArray<T> implements StackInterface<T> {
 
     public int search(Object var1) 
     {
-        return elements.lastIndexOf(var1);
+        int index = elements.indexOf(var1);
+        if(index == -1)
+        {
+            return -1;
+        }
+        else
+        {
+            return elements.size() - index;
+        }
     }
 
 }
